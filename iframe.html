@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title> iframe页 </title>
+</head>
+<body style="border: 1px #ccc solid;">
+<h1>我是iframe页</h1>
+<div id="oDiv">我是iframe页：iframe页的oDiv</div>
+<div id="btn">
+    <input type="button" value="获取父页面的window对象"/>
+</div>
+<script type="text/javascript">
+    var oIfr = document.getElementById("ifr"),
+        aBtns = document.getElementById("btn").getElementsByTagName("input");
+
+    //设置domain，和谐跨域访问限制
+    document.domain = "localhost";
+
+    //iframe相关操作
+    var getIframe = {
+        //在iframe里获得父页面的window对象
+        getParents : function(){
+            return {
+                parent : window.parent,
+                top : window.top
+            }
+        }
+    };
+
+    //Demo里执行的方法
+    function showWindow(){
+        alert("我是iframe页：iframe页的showWindow方法");
+    }
+
+    //获取父页面的window
+    aBtns[0].onclick = function(){
+        getIframe.getParents().parent.showDemo();
+    };
+
+</script>
+</body>
+</html>

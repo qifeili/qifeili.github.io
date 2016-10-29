@@ -1,0 +1,32 @@
+<html>  
+ <head>  
+  <title> New Document </title>  
+    <script>  
+      function   d(){   
+    	  alert("s");     
+    	location.assign("b.html");
+    	  alert("s");
+          var getval =document.getElementById("cc").value;  
+           document.location.href("http://localhost:liqifei/b.html?cc="+getval);     
+           alert("s0");
+      }  ; 
+      
+      function op(clname,clstore){
+    	  var clname=document.getElementById("aa");
+          var clname=document.getElementById("bb");
+                alert("success");
+    	  var myurl="http://localhost:liqifei/showDetail.html£¿name="+clname+"&storename="+clstore;
+    	   window.location.assign(encodeURI(myurl));
+    	        alert("success");
+    	  }
+</script>  
+ </head>  
+ <body>  
+  <input type="text"  id ="cc"><br>
+ <input type="button"  value="c"  onclick="d()" > <br>
+ 
+  <input type="text"  id ="aa"><br>
+  <input type="text"  id ="bb" ><br>
+  <input type="button"  value="ab"  onclick="op()" >  
+ </body>  
+</html> 
