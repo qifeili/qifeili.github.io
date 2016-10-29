@@ -5,8 +5,9 @@
 <title> 子网页 </title>
 </head>
 <body style="border: 1px #ccc solid;">
-      
-    </div>
+   <button onclick="guanbi()">guanbi</button>
+      <a href="javascirpt:void(0)" onclick="guanbi()">关闭页面</a>  
+        
      <!-- (1)打包图模块 -->
 <div id="header" style="width:100%;background-color:gray;"><h1 style="color:white;text-align:center">分屏实验 (打包图)</h1></div>
 <div id="dabaotu"  align="center" style="background-color:white; width:100%;height:600px; margin: 0 auto; border:solid; color:gray;" >
@@ -24,7 +25,6 @@ onmouseover="ab1()" onmouseout="ab2()"></canvas><br>
     <!-- 1.实验用的打包图(d3.js) -->
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="js/d3.min.js"></script><script src="js/d3.js"></script>
-<script src="/js/d3.min.js"></script><script src="/js/d3.js"></script>
 <script>
 	var width  = 500;
 	var height = 500;
@@ -110,7 +110,7 @@ onmouseover="ab1()" onmouseout="ab2()"></canvas><br>
 			svg.selectAll("circle")
 			.attr("fill",function(d,i){
 				if(i==m){
-				return "yellow";}
+				return "gold";}
 				else {return "rgb(31, 119, 180)" }
 				});
 			};  
@@ -119,6 +119,13 @@ onmouseover="ab1()" onmouseout="ab2()"></canvas><br>
      		.attr("fill",function(d,i){					
 					return "rgb(31, 119, 180)";					
 				});
+	}
+	function guanbi(){
+		// if(confirm("您确定要关闭本页吗？")){ 
+		window.opener=null;
+		window.open('','_self');
+		window.close();
+		// } 
 	}
 </script>
        
@@ -216,12 +223,8 @@ onmouseover="ab1()" onmouseout="ab2()"></canvas><br>
 /*     function show(){
         alert("我是iframe页：iframe页的showWindow方法; ！！典例！！"); 
     } */
-    function ab(a){   alert(a);  
-    var c=document.getElementById("myCanvas");
-    var ctx=c.getContext("2d");
-    ctx.fillStyle="#FF0000";
-    ctx.fillRect(0,0,500,100); alert("ab事件函数执行成功");
+    function ab(a){   
+     websocket.send("guanbi()");   
     };
 </script>
-
 </html>

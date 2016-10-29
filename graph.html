@@ -1,0 +1,101 @@
+
+<html>  
+<head>  
+	<meta charset="utf-8">  
+	<title>做一个简单的图表</title>  
+</head> 
+<style>
+.axis path,
+.axis line{
+fill:none;
+stroke:black;
+/* shape-rendering:crispEdges; */
+}
+</style>
+<body>  
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script> 
+<script src="js/d3.min.js"></script>
+<!-- 5.底部大区块 -->
+<div id="graph" style="opacity:1;position:absolute;left:310px;top:230px;width:1300px;height:345px;background-color:#666666">
+<h1 style="color:#e6e6e6">bottom</h1></div>
+
+<!-- 折线图  -->
+<script>
+      var gsvg=d3.select("#graph")				//选择文档中的body元素
+			     .append("svg")				//添加一个svg元素
+			     .attr("width", 1200)		//设定宽度
+			     .attr("height", 300);	    //设定高度 
+			  
+/* var gdpmax=0;
+for(var i=0;i<graphdata.length;i++){  
+   var curgdp=d3.max(graphdata[i].gdp,function(d){
+	      return d[1];
+   });
+   if(curgdp>gdpmax)
+	   gdpmax=curgdp;
+   } 
+console.log(gdpmax);
+*/
+var xScale=d3.scale.linear()
+             .domain([2000,2009])
+             .range([20,1000]);
+var yScale=d3.scale.linear()
+             .domain([0,7050])
+             .range([200,30]);
+           
+  colors=["red","green","gray"];
+
+ d3.json("Json/graph.json",function(error,graphdata){
+   
+     //添加折线
+	 var linePath=d3.svg.line()
+	                .x(function(d){	             	  
+	             	   return xScale(d.year);
+	                })
+	                .y(function(d){
+	             	   return yScale(d.money);
+	                });
+     //折线路径
+    var gpath=gsvg.selectAll("path")
+                  .data(graphdata)
+                  .enter()
+                  .append("path")
+                //.attr("transform","translate(10,10)")
+                  .attr("d",function(d,i){   
+                      console.log("名称："+d.name); console.log(d.parameter);
+    	              return linePath(d.parameter);
+                     })
+                   .attr("fill","none")
+                   .attr("stroke-width",3)
+                   .attr("stroke",function(d,i){
+                 	 return "red";
+                    });
+   
+        //添加圆节点
+        gsvg.selectAll("g")
+            .data(graphdata)
+            .enter()
+            .append("g")
+            .attr("d",function(d){
+            	return cg(d.parameter)
+            });
+            
+       function cg(d){
+    	     console.log("开头");console.log(d);    	     
+    	     
+          gsvg.selectAll("circle")
+              .data(d)
+              .enter()
+              .append("circle")             
+              .attr("cx",function(d){return xScale(d.year )})
+              .attr("cy",function(d){return yScale(d.money)})
+              .attr("fill","blue")
+              .attr("r","8");
+          console.log("结束");
+       }   
+
+ });
+       
+</script>	
+</body>  
+</html>  

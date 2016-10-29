@@ -5,11 +5,9 @@
 </head> 
 <link href="css/ab.css" rel="stylesheet">
 <style>
-	body{padding:0;margin:0;}
-	#bg{width:100%;height:100%;position:absolute;z-index:-1;}
 </style>
-<body style="background-color:#000033;">
-  <img id="bg" src="images/wuyu.tmp.jpg"/>
+<body style="background-color:#13133a;">
+
 <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script src="http://www.ourd3js.com/demo/d3/topojson.js"></script>
 <!-- 区块布局  -->
@@ -34,15 +32,10 @@
 <div id="rect" style="opacity:1;position:absolute;left:1590px;width:300px;height:550px;background-color:#003f80">
 <h1 style="color:#e6e6e6">&nbsp<b>Rect Datas</b></h1></div>
 <!-- 4.下方小区块-->
-<div style="opacity:1;position:absolute;left:330px;top:580px;width:300px;height:30px;background-color:#001966">
-<span style="color:#0086b3; font-size:20px; font-family:STHeiti">CMoney:low</span>
-<button style="border-color:#33ccff;background-color:#33ccff;width:30px;height:18px"></button>
-<button style="border-color:yellow;background-color:yellow;width:30px;height:18px"></button>
-<button style="border-color:#ff1a1a;background-color:#ff1a1a;width:30px;height:18px"></button>
-<span style="color:#0086b3; font-size:20px; font-family:STHeiti">high</span>
-</div>
+<div style="opacity:1;position:absolute;left:310px;top:580px;width:300px;height:45px;background-color:#293d3d">
+<h3 style="color:#e6e6e6">top on bottom</h3></div>
 <!-- 5.底部大区块 -->
-<div id="graph" style="opacity:1;position:absolute;left:310px;top:630px;width:1300px;height:345px;background-color: #00004d">
+<div id="graph" style="opacity:1;position:absolute;left:310px;top:630px;width:1300px;height:345px;background-color:#666666">
 <span style="padding-left:10px; font-size:28px;letter-spacing:1px;font-weight:bold; color:#e6e6e6">Global Web Site</span>
 <div style="opacity:1;position:absolute;left:130px;top:50px;width:1150px;height:2px;background-color:gray"></div>
 <div style="opacity:1;position:absolute;left:130px;top:120px;width:1150px;height:2px;background-color:gray"></div>
@@ -201,8 +194,8 @@ d3.json("rectdata.json",function(error,data){
                     .domain([0,7000])
                     .range([0,180]);  
      var colorScale=d3.scale.linear()
-                     .domain([2000,5000,7000])
-                     .range(["#33ccff","yellow","#ff1a1a"]);
+                     .domain([1000,4000,7000])
+                     .range(["gray","red","yellow"]);
   
   var rectg=svg2.selectAll("g")
                 .data(data.parameter)
