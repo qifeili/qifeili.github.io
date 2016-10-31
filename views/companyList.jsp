@@ -18,8 +18,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
-
-<link rel="shortcut icon" href="images/tablogo.png" type="image/x-icon">
 <title>专家 - Comwit</title>
 <link href="css/reset.css" rel="stylesheet">
 <!-- Bootstrap Core CSS -->

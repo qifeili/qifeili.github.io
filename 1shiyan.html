@@ -1,82 +1,138 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-
 <meta charset="utf-8"> 
-
 <title>菜鸟教程(runoob.com)</title> 
-
-<style type="text/css">
-
-* {  
-
-                margin: 0;  
-
-                padding: 0;  
-
-            }  
-
-            html,body{  
-
-                height:100%;  
-
-                width:100%;  
-
-            }  
-
-            canvas{  
-
-                display:block;  
-
-            } 
-
-</style>
-
 </head>
-
 <body>
 
+<!-- 5.底部大区块 -->
+<div id="graph" style="opacity:1;position:absolute;left:310px;top:630px;width:1300px;height:345px;background-color: #00004d">
+<span style="padding-left:10px; font-size:28px;letter-spacing:1px;font-weight:bold; color:#e6e6e6">Global Web Site</span>
+<div style="opacity:1;position:absolute;left:130px;top:50px;width:1150px;height:2px;background-color:gray"></div>
+<div style="opacity:1;position:absolute;left:130px;top:120px;width:1150px;height:2px;background-color:gray"></div>
+<div style="opacity:1;position:absolute;left:130px;top:190px;width:1150px;height:2px;background-color:gray"></div>
+</div>
 
-
-<canvas id="myCanvas"   width=1800 height="900" style="padding-top:0px;margin:0;
-
-padding:0;  border:1px solid ;">
-
-您的浏览器不支持 HTML5 canvas 标签。</canvas>
-
-
+<!-- 折线图 -->
 <script>
+  var graphsvg= d3.select("#graph")				//选择文档中的body元素
+			 .append("svg")				//添加一个svg元素
+			 .attr("width", 1300)		//设定宽度
+			 .attr("height", 270);	//设定高度
 
+	 var graphdata=[  
+			              {   country:"china",  
+			                  gdp:[[2000,25],[2001,24],[2002,25],  
+			                      [2003,25],[2004,26],[2005,24],  
+			                      [2006,24],[2007,25],[2008,24],  
+			                      [2009,25],[2010,24],[2011,25],  
+			                      [2012,25],[2013,24]]  
+			              },  
+			              {  
+			                  country:"japan",  
+			                  gdp:[[2000,15],[2001,14],[2002,15],  
+			                      [2003,16],[2004,15],[2005,15],  
+			                      [2006,15],[2007,16],[2008,14],  
+			                      [2009,15],[2010,15],[2011,15],  
+			                      [2012,17],[2013,16]]  
+			              } ,  
+			              {  
+			                  country:"japan",  
+			                  gdp:[[2000,5],[2001,4],[2002,5],  
+			                      [2003,6],[2004,5],[2005,5],  
+			                      [2006,5],[2007,6],[2008,4],  
+			                      [2009,5],[2010,5],[2011,5],  
+			                      [2012,7],[2013,6]]  
+			              },  
+			              {  
+			                  country:"japan",  
+			                  gdp:[[2000,4],[2001,3],[2002,5],  
+			                      [2003,5],[2004,4],[2005,4],  
+			                      [2006,4],[2007,5],[2008,4],  
+			                      [2009,5],[2010,4],[2011,5],  
+			                      [2012,6],[2013,5]]  
+			              },  
+			              {  
+			                  country:"japan",  
+			                  gdp:[[2000,6],[2001,4],[2002,4],  
+			                      [2003,5],[2004,4],[2005,6],  
+			                      [2006,4],[2007,5],[2008,6],  
+			                      [2009,6],[2010,5],[2011,4],  
+			                      [2012,5],[2013,6]]  
+			              }/* ,  
+			              {  
+			                  country:"line1",  
+			                  gdp:[[2000,21],[2013,21],]  
+			              }   */
+			          ];  
+			 
+var gdpmax=0;
+for(var i=0;i<graphdata.length;i++){  
+   var curgdp=d3.max(graphdata[i].gdp,function(d){
+	      return d[1];
+   });
+   if(curgdp>gdpmax)
+	   gdpmax=curgdp;
+   }
+console.log(gdpmax);
 
-var c=document.getElementById("myCanvas");
+var xScale=d3.scale.linear()
+             .domain([2000,2014])
+             .range([150,1230]);
+var yScale=d3.scale.linear()
+             .domain([0,30])
+             .range([230,10]);
+ 
+var linePath=d3.svg.line()
+                   .x(function(d){
+                    console.log(d[1]);
+	                 return xScale(d[0])
+                       })
+                   .y(function(d){
+	                   return yScale(d[1])
+                       });
+  
+  colors=["red","green","#44cc00","#660022"," #00a3cc"];
+  
+  graphsvg.selectAll("path")
+     .data(graphdata)
+     .enter()
+     .append("path")
+     .attr("transform","translate(10,10)")
+     .attr("d",function(d){
+   console.log(d.gdp); 	 return linePath(d.gdp)
+     })
+     .attr("fill","none")
+     .attr("stroke-width",3)
+     .attr("stroke",function(d,i){
+    	 return colors[i];
+     })
+     .attr("opacity","1");  
 
-var ctx=c.getContext("2d");
+  var xAxis=d3.svg.axis()
+              .scale(xScale)
+              .ticks(9)
+              .tickFormat(d3.format("d"))
+              .orient("bottom")
+              
+  var yAxis=d3.svg.axis()
+              .scale(yScale)
+              .ticks(8)
+              .orient("left");
+              
+  graphsvg.append("g")
+          .attr("class","axis")
+          .attr("transform","translate(10,230)")
+          .attr("fill","yellow")
+          .call(xAxis);
 
-
-// Create gradient
-
-var grd=ctx.createLinearGradient(0,0,1800,0);
-
-grd.addColorStop(0,"#000033");
-
-grd.addColorStop(0.5,"#001966");
-
-
-grd.addColorStop(1,"#000033");
-
-
-// Fill with gradient
-
-ctx.fillStyle=grd;
-
-ctx.fillRect(0,0,1800,900);
-
-
-</script>
-
-
-</body>
-
-</html>
+  graphsvg.append("g")  
+          .attr("class","axis")  
+          .attr("transform","translate(100,10)")  
+          .attr("fill","yellow")
+          .call(yAxis);   
+  
+  </script> 
+</body>  
+</html>  
