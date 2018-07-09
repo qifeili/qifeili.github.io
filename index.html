@@ -9,9 +9,11 @@
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //Custom Theme files -->
 <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
-<link href="css/style.css" type="text/css" rel="stylesheet" media="all"> 
+<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/index.css" type="text/css" rel="stylesheet" media="all">
 <!-- js -->
-<script src="js/jquery-2.2.3.min.js"></script> 
+<script src="js/jquery-2.2.3.min.js"></script>
+	<script src="js/message.js"></script>
 <!-- //js -->	
 <!-- //web-fonts -->  
 <!-- font-awesome icons -->
@@ -20,15 +22,7 @@
 <!-- start-smooth-scrolling -->
 <script type="text/javascript" src="js/move-top.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>	
-<script type="text/javascript">
-		jQuery(document).ready(function($) {
-			$(".scroll").click(function(event){		
-				event.preventDefault();
-		
-		$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-			});
-		});
-</script>
+
 </head> 
 <body> 
 	<!-- top-nav -->
@@ -44,12 +38,8 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-center cl-effect-15">
 						<li><a href="index.html" class="active">主页</a></li>
-						<li><a href="CHNindex.html" data-hover="英文版">英文版</a></li>
-						<li><a href="about.html" data-hover="关于">关于</a></li>					
-						<li><a href="portfolio.html" data-hover="文件夹">文件夹</a></li>
-						<li><a href="codes.html"  data-hover="代码">代码</a></li>			
-						<li><a href="11haha.html" data-hover="数据可视化">数据可视化</a></li>
-					</ul>	
+						<li><a href="GoldTrade.html#detail" data-hover="黄金交易" onclick="ScrollTop()">黄金交易</a></li>
+					</ul>
 					<div class="clearfix"> </div>
 				</div>
 			</div>	
@@ -61,7 +51,7 @@
 		<div class="banner-info">
 			<div class="container">	 
 				<div class="banner-text">
-					<h1><a href="index.html" style="color:red">春节快乐！</a></h1>
+					<h1><a href="index.html"  style="font-family: 'Times New Roman'">Welcome!</a></h1>
 					<ul class="wthree-bnr-text">
 						<li><i class="fa fa-phone" aria-hidden="true"> </i>  +86 138 2096 5547</li>
 						<li><i class="fa fa-envelope" aria-hidden="true"></i><a href="716716@sina.com"> 716716fei@sina.com</a></li>
@@ -83,13 +73,13 @@
 	<!-- welcome -->
 	<div class="welcome"> 
 		<div class="container">	 
-			<h3 class="agileits-title">李齐飞主页</h3>
+			<h3 class="agileits-title">Part One</h3>
 			<div class="welcome-row">
 				<div class="col-md-4 welcome-grids">
-					<h3>一万小时定律</h3>
+					<h3>黄金交易</h3>
 					<p>作家格拉德威尔在《异类》一书中指出：<br>&nbsp&nbsp人们眼中的天才之所以卓越非凡，并非天资超人一等，而是付出了持续不断的努力。1万小时的锤炼是任何人从平凡变成世界级大师的必要条件。“
 ”他将此称为“一万小时定律”。<br>&nbsp&nbsp要成为某个领域的专家，需要10000小时，按比例计算就是：如果每天工作八个小时，一周工作五天，那么成为一个领域的专家至少需要五年。这就是一万小时定律。</p>
-					<a href="single.html" class="button12"><span>阅读更多</span></a>
+					<a href="single.html" class="button12"><span>了解更多</span></a>
 				</div>
 				<div class="col-md-4 welcome-grids welcome-grids2">
 					<img src="images/1a.jpg"  class="img-responsive" alt=""/>
@@ -104,7 +94,22 @@
 				<div class="clearfix"> </div>
 			</div>	 			
 		</div>	 			
-	</div>			
+	</div>
+
+
+	<!--Gold Trading-->
+	<!--<div id="detail">
+		<div class="container ">
+			<h3 class="agileits-title">黄金交易实时价格</h3>
+			<div  style="width:850px;height:690px;overflow:hidden;margin: 0 auto;/*transform: scale(0.65,0.75);*/">
+				<iframe id="iframed" src="http://www.dyhjw.com/hjtd/"  scrolling="no" frameborder="0" style="position:relative;top:-230px;left:-230px;width:1000px;height:1200px;"></iframe>
+			</div>
+
+		</div>
+
+
+	</div>-->
+
 	<!-- //welcome -->
 	<!-- services -->
 	<div class="services"> 
@@ -200,20 +205,31 @@
 		</div>
 	</div>
 	<!-- //features -->
+	<!--留言板-->
+<!--	<h1>留言板</h1>
+	<div id="content" >
+		<div id="post">
+			<textarea id="transition"></textarea>
+			<input id="postBt" type="button" value="发表评论" onclick="save()"/>
+			<input id="clearBt" type="button" value="清空所有" onclick="clearD()"/>
+		</div>
+		<ul id="comment"></ul>
+	</div>-->
+
 	<!-- address -->
 	<div class="address">
 		<div class="container">
 			<ul>
-				<li><i class="fa fa-map-marker" aria-hidden="true"></i>Broome St, Canada, NY 10002, USA</li>
-				<li><i class="fa fa-phone" aria-hidden="true"></i>  +033 111 222 4567</li>
-				<li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@example.com"> mail@example.com</a></li>
+				<li><i class="fa fa-map-marker" aria-hidden="true"></i>WangJing , BeiJing, NY 10002, China</li>
+				<li><i class="fa fa-phone" aria-hidden="true"></i>  +86 176 1159 6189</li>
+				<li><i class="fa fa-envelope" aria-hidden="true"></i><a href="716716fei@sina.com"> 496212874@@qq.com</a></li>
 			</ul>
 		</div>
 	</div>
 	<!-- //address -->
 	<!-- footer-icons -->
 	<div class="footer-icons">
-		<div class="container">	 
+		<div class="container">
 			<ul class="social"> 
 				<li class="facebook"><a href="#" class="fa fa-facebook"></a></li>
 				<li class="twitter"><a href=" " class="fa fa-twitter"></a></li>

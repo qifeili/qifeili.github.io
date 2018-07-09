@@ -200,8 +200,7 @@ h3.agileits-title {
     text-align: center;
     font-size: 5em;
     color: #f30d60;
-    margin-bottom: 0.4em;
-    margin-top:0.4em;
+    margin-bottom: 0.6em;
 }
 .welcome h5 {
     font-size: 1.2em;
@@ -216,7 +215,7 @@ h3.agileits-title {
 }
 p {
     font-size: 1em;
-    color: #122b40;
+    color: #999;
     line-height: 1.8em;
 }
 .welcome h6 {
@@ -250,7 +249,6 @@ img.img-responsive {
     line-height: 43px;
     color: #fff;
 	margin-top: 1.2em;
-
 	font-size: 1em;
 }
  
@@ -946,7 +944,7 @@ h4.w3ls-title {
 .author-grid {
     padding: 2em;
     background: #212121;
-	width: 100%;
+	width: 80%;
 }
 .author-grid-left {
     float: left;
@@ -991,7 +989,7 @@ h4.w3ls-title {
     font-weight: 300;
 }
 .write-reply form{
-	width:100%;
+	width:80%;
 }
 .write-reply input[type="text"],.write-reply input[type="email"],.write-reply textarea{
 	outline: none;
@@ -1030,23 +1028,7 @@ h4.w3ls-title {
 }
 .write-reply input[type="text"]:nth-child(2) {
     margin: 0.1em 0 .5em;
-}
-.write-reply .cradioSpan{
-    font-size: 20px;
-    line-height: 40px;
-}
-.write-reply .cradio{
-    margin: 10px;width: 20px;height: 20px
-}
-
-
-.fr{
-    float: right; 
-}
-.fl{
-    float: left;
-}
-
+} 
 .admin-icons ul li {
   display: inline-block;
 }
@@ -2064,7 +2046,6 @@ h4.w3ls-title {
 h3.agileits-title {
     font-size: 2.8em;
     margin-bottom: 0.4em;
-    margin-top:0.4em;
 }
 .about .bs-example-tabs ul.nav-tabs li a {
     font-size: 1.8em;

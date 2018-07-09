@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>黄金交易</title>
+    <!-- Custom Theme files -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //Custom Theme files -->
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/index.css" type="text/css" rel="stylesheet" media="all">
+    <!-- js -->
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script src="js/message.js"></script>
+    <!-- //js -->
+    <!-- //web-fonts -->
+    <!-- font-awesome icons -->
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- //font-awesome icons -->
+    <!-- start-smooth-scrolling -->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+
+</head>
+<body>
+<!-- top-nav -->
+<div class="top-nav">
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    菜单
+                </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-center cl-effect-15">
+                    <li><a href="index.html" class="active">主页</a></li>
+                    <li><a href="#detail" data-hover="黄金交易" onclick="ScrollTop()">黄金交易</a></li>
+                </ul>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </nav>
+</div>
+<!-- //top-nav -->
+<!-- banner -->
+<div class="banner">
+    <div class="banner-info">
+        <div class="container">
+            <div class="banner-text">
+                <h1><a href="index.html"  style="font-family: 'Times New Roman'">Golders!</a></h1>
+                <ul class="wthree-bnr-text">
+                    <li><i class="fa fa-phone" aria-hidden="true"> </i>  +86 176 1159 6189 </li>
+                    <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="716716@sina.com"> 716716fei@sina.com</a></li>
+                </ul>
+                <div class="banner-icons">
+                    <ul class="social">
+                        <li class="facebook"><a href="#" class="fa fa-facebook"></a></li>
+                        <li class="twitter"><a href=" " class="fa fa-twitter"></a></li>
+                        <li class="dribbble"><a href=" " class="fa fa-dribbble"></a></li>
+                        <li class="behance"><a href=" " class="fa fa-behance"></a></li>
+                        <li class="linked-in"><a href="#" class="fa fa-linkedin"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //banner -->
+<!-- welcome -->
+<div class="goldService container ">
+
+    <h3 class="agileits-title">Guides And Function</h3>
+    <div class="welcome-row row">
+        <div class="col-md-6 welcome-grids">
+            <img src="images/baby.jpg"  class="img-responsive" alt=""/>
+
+        </div>
+        <div class="col-md-6 welcome-grids">
+            <h3>Golders简介</h3>
+            <p>&emsp;&emsp;</p>
+            <p> &emsp;&emsp;Golders是一款针对黄金投资提供交易建议的服务，它根据实时金价判断当前黄金的买入卖出指数，并提供买入和卖出仓位数量的建议。
+            黄金价格波动相比股票和基金较为稳定，是一种风险较小的理财方式。目前，Golders推荐的黄金投资渠道是支付宝-蚂蚁财富中的博时黄金,是更适合普通人的理财之选。</p>
+            <p> &emsp;&emsp;2018年7月开始，Golders将开始为期一年的测试期，目前，Golders正常状态下有95%的把握保证盈利，剩余5%的风险是世界大变动或其他极端事件。如果对黄金理财和Golders服务有兴趣，可在评论区留言，
+                则有机会成为体验者。如果成功订阅Golders服务，每个交易日可以收到黄金交易指数和买卖建议的邮件提醒，或者只订阅交易提醒。</p>
+            <p> &emsp;&emsp;Golders的愿景是每年为用户提供10%-20%的收益，如果未来一年，收益能突破10%，届时Golders将进行一次大的升级和服务完善，也将在这条路上走的更远。</p>
+
+
+        </div>
+
+    </div>
+    <div class="row" style="margin: 25px">
+        <div class="col-md-6 welcome-grids">
+            <p>&emsp;&emsp;</p>
+            <h2 color="yellow">黄金实时交易指数</h2>
+
+            <a href="single.html" class="button12"><span>交易指数：5.133</span></a>
+            <p>&emsp;&emsp;</p>
+        </div>
+        <div class="col-md-6 welcome-grids">
+            <img src="images/beautifulgirl.jpg"  class="img-responsive" alt=""/>
+        </div>
+    </div>
+
+</div>
+<!--<div width="100%"  ><p>&emsp;&emsp;</p><p>&emsp;&emsp;</p></div>-->
+
+
+<!--Gold Trading-->
+<div id="detail">
+    <div class=" col-lg-12">
+        <h3 class="agileits-title">AU9999实时价格</h3>
+        <div id="changePercentage"></div>
+        <!--<div id="changePercentage" style="width:510px;height:580px; overflow:hidden;margin: 0 auto; /*transform: scale(0.5,0.75);*/ " >
+            <iframe id="iframed" src="http://m.dyhjw.com/hjtd/"
+                    scrolling="no" frameborder="0" style="position:relative;top:-150px;left:-15px/*top:-230px;left:-230px*/;width:550px;height:1200px;" >
+
+            </iframe>
+        </div>-->
+
+    </div>
+
+
+</div>
+
+
+
+<!-- //features -->
+<!--留言板-->
+<div width="100%"  ><p>&emsp;&emsp;</p></div>
+<h3 class="agileits-title">留言板</h3>
+
+<div  class="container">
+   <!-- <div id="post">
+        <textarea id="transition"></textarea>
+        <input id="postBt" type="button" value="发表评论" onclick="save()"/>
+        <input id="clearBt" type="button" value="清空所有" onclick="clearD()"/>
+    </div>
+    <ul id="comment"></ul>-->
+
+
+    <div class="author">
+        <h4 class="w3ls-title"> About Me</h4>
+        <div class="author-grid">
+            <div class="author-grid-left">
+                <img src="images/4a.jpg" alt=" " class="img-responsive ">
+            </div>
+            <div class="author-grid-right">
+                <h4><a href="#">Jonathon</a><span>Expert</span></h4>
+                <p>Happiness is not a goal, cum soluta nobis est eligendi optio
+                    cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis
+                    voluptas assumenda est, omnis dolor repellendus.</p>
+                <div class="admin-icons">
+                    <ul>
+                        <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                        <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                        <li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+                        <li><a href="#"><span class="fa fa-dribbble"></span></a></li>
+                        <li><a href="#"><span class="fa fa-behance"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <div class="write-reply">
+        <h4 class="w3ls-title">Write a Comment</h4>
+        <!--<form action="http://118.24.35.35:8888/acgolder" method="get"  id="sunM">-->
+            <input type="text" name="name" id="Cname" placeholder="Name"  required="">
+            <textarea name="comment" id="Ccomment" placeholder="Write a comment here..." required=""></textarea>
+
+            <!--<input type="email" name="Email" placeholder="Email" required="">-->
+           <!--// <input type="text" name="Website" placeholder="Website"  required="">-->
+
+            <input type="checkbox" name="authority" value="pri" class="cradio fl" style="margin: 10px;width: 20px;height: 20px"><span class="cradioSpan fl" style="width: 100px;height: 40px;display:block;line-height: 40px;">仅主人可见</span>
+            <!-- <input type="radio" name="authority" value="pri" class="cradio" ><span class="cradioSpan">仅主人可见</span>-->
+            <input type="submit" value="Submit" onclick="saveCommit()"> <!--onclick="saveCommit()"-->
+
+
+        <!--</form>-->
+
+    </div>
+    <div class="container">
+        <h4 class="w3ls-title " style="margin-top: 2%; float: left;">评论详情:</h4>
+
+        <button id="showAll" class="btn btn-primary fr" style="margin:2% 1%;" onclick="showComment('http://118.24.35.35:8888/gacgolder')">显示全部</button>
+        <button id="show" class="btn btn-primary fr" style="margin:2% 1%;">隐藏评论</button>
+
+
+    </div>
+    <div class="container ">
+        <ul id="comment" style="width: 100%;"></ul>
+    </div>
+</div>
+
+<div width="100%"  ><p>&emsp;&emsp;</p></div>
+
+<!-- address -->
+<div class="address">
+    <div class="container">
+        <ul>
+            <li><i class="fa fa-map-marker" aria-hidden="true"></i>WangJing , BeiJing, NY 10002, China</li>
+            <li><i class="fa fa-phone" aria-hidden="true"></i>  +86 176 1159 6189</li>
+            <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="716716fei@sina.com"> 716716fei@sina.com</a></li>
+        </ul>
+    </div>
+</div>
+<!-- //address -->
+<!-- footer-icons -->
+<div class="footer-icons">
+    <div class="container">
+        <ul class="social">
+            <li class="facebook"><a href="#" class="fa fa-facebook"></a></li>
+            <li class="twitter"><a href=" " class="fa fa-twitter"></a></li>
+            <li class="dribbble"><a href=" " class="fa fa-dribbble"></a></li>
+            <li class="behance"><a href=" " class="fa fa-behance"></a></li>
+            <li class="linked-in"><a href="#" class="fa fa-linkedin"></a></li>
+        </ul>
+
+    </div>
+</div>
+<!-- //footer-icons -->
+<!-- footer -->
+<div class="footer">
+    <div class="container">
+
+        <div class="footer-right">
+            <h2><a href="index.html">Jonathon&emsp;&emsp;</a></h2>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<!-- //footer -->
+<!-- smooth-scrolling-of-move-up -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        /*
+        var defaults = {
+            containerID: 'toTop', // fading element id
+            containerHoverID: 'toTopHover', // fading element hover id
+            scrollSpeed: 1200,
+            easingType: 'linear'
+        };
+        */
+
+        $().UItoTop({ easingType: 'easeOutQuart' });
+
+    });
+
+
+/*判断浏览器是手机还是电脑,显示对应的黄金交易页面*/
+    function browserRedirect() {
+
+
+        //location.reload();
+        var sUserAgent = navigator.userAgent.toLowerCase();
+        var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+        var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+        var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+        var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+        var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+        var bIsAndroid = sUserAgent.match(/android/i) == "android";
+        var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+        var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+        var iframesrc=document.getElementById("iframed");
+        var change=document.getElementById('changePercentage');
+
+        if ((bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) ){
+
+            change.innerHTML="<div id=\"changePercentage\" style=\"width:520px;height:580px; overflow:hidden;margin: 0 auto; /*transform: scale(0.5,0.75);*/ \" >\n" +
+                "            <iframe id=\"iframed\" src=\"http://m.dyhjw.com/hjtd/\"\n" +
+                "                    scrolling=\"no\" frameborder=\"0\" style=\"position:relative;top:-150px;left:-15px;width:550px;height:1200px;\" >\n" +
+                "\n" +
+                "            </iframe>\n" +
+                "        </div>";
+
+
+
+        }else{
+            change.innerHTML=" <div id=\"changePercentage\" style=\"width:820px;height:680px; overflow:hidden;margin: 0 auto; /*transform: scale(0.5,0.75);*/ \" >\n" +
+                "            <iframe id=\"iframed\" src=\"http://dyhjw.com/au9999.html/\"\n" +
+                "                    scrolling=\"no\" frameborder=\"0\" style=\"position:relative;top:-280px;left:-250px;width:1100px;height:1200px;\" >\n" +
+                "\n" +
+                "            </iframe>\n" +
+                "        </div>";
+
+        }
+    }
+
+    browserRedirect();
+
+
+
+    /*默认显示评论内容*/
+    function  showComment(url) {
+
+        var time=new Date().toLocaleString();
+        var ul=document.getElementById("comment");
+
+        var li="";
+
+    $.ajax({
+
+        type : "get",
+        async:false,
+        url : url,
+        dataType : "json",//jsonp数据类型
+        // dataType : "jsonp",//jsonp数据类型
+        // jsonp: "jsonpCallback",//服务端用于接收callback调用的function名的参数
+        success : function(data){
+          // console.log(data);
+            for(var i=0;i<data.length;i++){
+                li +="<li style='position: relative'><p><span class='cname fl' > 昵称："+data[i].name+"</span><span class='msg'>"+data[i].comment+"</span><span class='datetime' style='float: right'>评论时间："+data[i].time+"</span></p></li>"
+
+            }
+            ul.innerHTML=li;
+
+        },
+        error:function(){
+            console.log("ajax请求出错！");
+        }
+
+    });
+
+
+    }
+    showComment("http://118.24.35.35:8888/gcgolder");
+
+/*点击隐藏写评论区*/
+ $("#show").click(function () {
+ var showValue=document.getElementById("show").innerHTML;
+     var showAllvalue=document.getElementById("showAll").innerHTML;
+     //console.log(showValue);
+     if(showValue=="显示评论"){
+         document.getElementById("show").innerHTML="隐藏评论";
+         $("#comment").toggle(2000);
+     }else{
+         document.getElementById("show").innerHTML="显示评论";
+         $("#comment").toggle(2000);
+     }
+
+ });
+ $("#showAll").click(function () {
+     var showValue=document.getElementById("show").innerHTML;
+     var showAllvalue=document.getElementById("showAll").innerHTML;
+    // console.log(showValue);
+     if(showAllvalue=="显示全部"){
+         document.getElementById("showAll").innerHTML="显示最新";
+        // $("#comment").toggle(2000);
+         showComment("http://118.24.35.35:8888/gacgolder");
+
+     }else{
+         document.getElementById("showAll").innerHTML="显示全部";
+       // $("#comment").toggle(2000);
+         showComment("http://118.24.35.35:8888/gcgolder");
+     }
+ });
+
+
+  $("#sunM").on('submit',function () {
+      saveCommit();
+      event.preventDefault();
+  });
+    function saveCommit() {
+     var name=document.getElementById("Cname").value;
+     var value=document.getElementById("Ccomment").value;
+     var auth="pub";
+     //var val=$("input:radio[name="authority"]:checked").val();
+        var val= $('.cradio:checked').val();
+     var authValue=document.getElementsByName("authority")[0].value;
+     console.log(val);
+
+     /*判断有没有选择仅主人可见，如果选择就将auth权限改为pri*/
+       if(val=="pri"){
+           auth="pri"
+       }
+
+
+        $.ajax({
+            type:'get',
+            url:"http://118.24.35.35:8888/acgolder",
+
+            data:{
+                name:name,
+                comment:value,
+                authority:auth
+            },
+            dataType : "text",
+            success:function (data) {
+               // console.log(data);
+                /*添加评论成功以后从新加载显示新添加的评论*/
+                showComment("http://118.24.35.35:8888/gcgolder");
+            },
+            error:function () {
+                console.log("添加评论区ajax请求出错！");
+
+            }
+
+
+        })
+    }
+
+
+</script>
+<!-- //smooth-scrolling-of-move-up -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/bootstrap.js"></script>
+</body>
+</html>

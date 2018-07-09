@@ -88,7 +88,7 @@ html.swipebox-html.swipebox-touch {
   left: 0;
 }
 #swipebox-slider .slide-loading {
-  background: url(../images/loader.gif) no-repeat center center;
+  background:url(../images/loader.gif) no-repeat center center;
 }
 
 #swipebox-bottom-bar,
@@ -336,8 +336,9 @@ html.swipebox-html.swipebox-touch {
     padding-right: 1.2em;
 }
 }
-@media(max-width:320px){
-#swipebox-title {
-    width: 90%; 
+@media(max-width:320px) {
+  #swipebox-title {
+    width: 90%;
     margin: 0 auto !important;
+  }
 }
