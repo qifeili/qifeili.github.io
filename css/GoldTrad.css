@@ -1,0 +1,77 @@
+.goldService {
+    width: 1200px;
+    height: 600px;
+    margin: 0 auto;
+    background-color: whitesmoke;
+}
+
+.gold_Intro {
+    width: 580px;
+    height: 490px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    transition: all 0.25s;
+
+}
+
+.gold_index {
+
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.gold_Intro p {
+    padding: 40px;
+    text-align: justify;
+    text-indent: 2em;
+    font-size: 20px;
+    color: #000;
+}
+.container{
+    width:1200px;
+    height:800px;
+    background-color: whitesmoke;
+    margin:0 auto;
+}
+.con_intro{
+    width:300px;
+    height:500px;
+    margin-left: 20px;
+}
+.con_intro p{
+    text-align: justify;
+    text-indent: 2em;
+    font-size: 20px;
+
+}
+h2 {
+    margin:0;
+    text-align: center;
+    padding:20px 0 20px 0;
+    height:50px;
+    font-size: 30px;
+    line-height: 50px;
+    color: white;
+    background-color: #03a9f4;
+
+}
+h2:hover{
+    color: #000;
+//background-color: white;
+}
+
+
+.con_chart{
+    width:850px;height:690px;overflow:hidden;margin: 0 auto;
+}
+#content{
+    width:1200px;
+    height:auto;
+    margin:0 auto;
+}
