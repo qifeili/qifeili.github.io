@@ -105,7 +105,25 @@
             <img src="images/beautifulgirl.jpg"  class="img-responsive" alt=""/>
         </div>
     </div>
+    <div class="row" style="margin: 20px">
+        <div class="col-lg-12 welcome-grids bgImgGirl" >
 
+            <h2 style="color: white; margin: 20px 0 50px 0 ;" >黄金实时交易指数</h2>
+
+            <a href="#"  ><span id="TradingIndexs"style=" margin: 20px 0 50px 0 ;">交易指数：5.133</span></a>
+            <p>&emsp;&emsp;</p>
+            <p>&emsp;&emsp;</p>
+            <p>&emsp;&emsp;</p>
+            <p>&emsp;&emsp;</p>
+            <p>&emsp;&emsp;</p>
+            <p>&emsp;&emsp;</p>
+            <p>&emsp;&emsp;</p>
+            <p>&emsp;&emsp;</p>
+        </div>
+        <!--<div class="col-md-6 welcome-grids">
+            <img src="images/beautifulgirl.jpg"  class="img-responsive" alt=""/>
+        </div>-->
+    </div>
 </div>
 <!--<div width="100%"  ><p>&emsp;&emsp;</p><p>&emsp;&emsp;</p></div>-->
 
@@ -404,24 +422,27 @@
         })
     }
 
-window.onload(function TradeIndex() {
-
+function TradeIndex() {
+    console.log("hahha");
     $.ajax({
         type:"get",
-
         async:"true",
         url:"http://118.24.35.35:8888/gtxgolder",
-        dataType:"json",
+       /* dataType:"json",*/
         data:{},
-        success:function () {
+        success:function (data) {
             console.log(data);
+            document.getElementById("TradingIndex").innerHTML=data;
             console.log("hahha");
+        },
+        error:function () {
+         console.log("ajax请求出错！")
         }
     })
 
 
-})
-
+}
+    TradeIndex();
 
 
 
