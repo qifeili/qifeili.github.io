@@ -98,7 +98,7 @@
             <p>&emsp;&emsp;</p>
             <h2 color="yellow">黄金实时交易指数</h2>
 
-            <a href="single.html" class="button12"><span>交易指数：5.133</span></a>
+            <a href="#" class="button12"><span id="TradingIndex">交易指数：5.133</span></a>
             <p>&emsp;&emsp;</p>
         </div>
         <div class="col-md-6 welcome-grids">
@@ -402,6 +402,26 @@
 
         })
     }
+
+window.onload(function TradeIndex() {
+
+    $.ajax({
+        type:"get",
+
+        async:"true",
+        url:"http://118.24.35.35:8888/gtxgolder",
+        dataType:"json",
+        data:{},
+        success:function () {
+            console.log(data);
+            console.log("hahha");
+        }
+    })
+
+
+})
+
+
 
 
 </script>
