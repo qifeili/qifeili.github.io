@@ -74,7 +74,7 @@
 <!-- welcome -->
 <div class="goldService container ">
 
-    <h3 class="agileits-title">Goldersd Guides</h3>
+    <h3 class="agileits-title">Golders Guides</h3>
     <div class="welcome-row row">
         <div class="col-md-6 welcome-grids">
             <img src="images/baby.jpg"  class="img-responsive" alt=""/>
@@ -181,11 +181,8 @@
     <div class="write-reply">
         <h4 class="w3ls-title">Write a Comment</h4>
         <!--<form action="http://118.24.35.35:8888/acgolder" method="get"  id="sunM">-->
-            <input type="text" name="name" id="Cname" placeholder="Name"  required="">
-            <textarea name="comment" id="Ccomment" placeholder="Write a comment here..." required=""></textarea>
-
-            <!--<input type="email" name="Email" placeholder="Email" required="">-->
-           <!--// <input type="text" name="Website" placeholder="Website"  required="">-->
+            <input type="text" name="name" id="Cname" placeholder="Name（请输入昵称）"  required="">
+            <textarea name="comment" id="Ccomment" placeholder="Write a comment here..（评论内容）" required=""></textarea>
 
             <input type="checkbox" name="authority" value="pri" class="cradio fl" style="margin: 10px;width: 20px;height: 20px"><span class="cradioSpan fl" style="width: 100px;height: 40px;display:block;line-height: 40px;">仅主人可见</span>
             <!-- <input type="radio" name="authority" value="pri" class="cradio" ><span class="cradioSpan">仅主人可见</span>-->
@@ -391,37 +388,42 @@
        }
        if(name==""){
         alert("昵称不能为空！")
-
        }else if(value==""){
-         alert("评论不能为空！")
+           alert("评论不能为空！");
 
-       }else{
-       $.ajax({
-            type:'get',
-            url:"http://118.24.35.35:8888/acgolder",
+       }else {
+           $.ajax({
+               type:'get',
+               url:"http://118.24.35.35:8888/acgolder",
 
-            data:{
-                name:name,
-                comment:value,
-                authority:auth
-            },
-            dataType : "text",
-            success:function (data) {
-               // console.log(data);
-                /*添加评论成功以后从新加载显示新添加的评论*/
-                showComment("http://118.24.35.35:8888/gcgolder");
-            },
-            error:function () {
-                console.log("添加评论区ajax请求出错！");
+               data:{
+                   name:name,
+                   comment:value,
+                   authority:auth
+               },
+               dataType : "text",
+               success:function (data) {
+                   // console.log(data);
+                   /*添加评论成功以后从新加载显示新添加的评论*/
+                   document.getElementById("Cname").value="";
+                   document.getElementById("Ccomment").value="";
+                   showComment("http://118.24.35.35:8888/gcgolder");
+               },
+               error:function () {
+                   console.log("添加评论区ajax请求出错！");
 
-            }
-        })
+               }
 
+
+           })
        }
+
+
+
     }
 
 function TradeIndex() {
-    console.log("hahha");
+
     $.ajax({
         type:"get",
         async:"true",
@@ -429,9 +431,8 @@ function TradeIndex() {
        /* dataType:"json",*/
         data:{},
         success:function (data) {
-            console.log(data);
-            document.getElementById("TradingIndex").innerHTML=data;
-            console.log("hahha");
+           // console.log(data);
+            document.getElementById("TradingIndexs").innerHTML=data;
         },
         error:function () {
          console.log("ajax请求出错！")
