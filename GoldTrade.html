@@ -404,13 +404,20 @@
                dataType : "text",
                success:function (data) {
                    // console.log(data);
-                   /*添加评论成功以后从新加载显示新添加的评论*/
-                   document.getElementById("Cname").value="";
-                   document.getElementById("Ccomment").value="";
-                   showComment("http://118.24.35.35:8888/gcgolder");
+                   if(data.indexOf("success")!=-1){
+                       alert("添加评论成功！");
+                       /*添加评论成功以后从新加载显示新添加的评论*/
+                       document.getElementById("Cname").value="";
+                       document.getElementById("Ccomment").value="";
+                       showComment("http://118.24.35.35:8888/gcgolder");
+                   }else{
+                       alert("添加评论失败！")
+                   }
+
+
                },
                error:function () {
-                   console.log("添加评论区ajax请求出错！");
+                   alert("添加评论区ajax请求出错！添加评论失败！");
 
                }
 
