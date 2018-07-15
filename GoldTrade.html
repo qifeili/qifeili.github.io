@@ -376,8 +376,8 @@
       event.preventDefault();
   });
     function saveCommit() {
-     var name=document.getElementById("Cname").value;
-     var value=document.getElementById("Ccomment").value;
+     var name=document.getElementById("Cname").value.replace(/\s+/g, '%20').replace('&','%26');
+     var value=document.getElementById("Ccomment").value.replace(/\s+/g, '%20').replace('&','%26');
      var auth="pub";
      //var val=$("input:radio[name="authority"]:checked").val();
         var val= $('.cradio:checked').val();
