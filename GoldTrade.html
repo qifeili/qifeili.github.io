@@ -84,10 +84,10 @@
             <h3>Golders简介</h3>
             <p>&emsp;&emsp;</p>
             <p> &emsp;&emsp;Golders是一款针对黄金投资提供交易建议的服务，它根据实时金价判断当前黄金的买入卖出指数，并提供买入和卖出仓位数量的建议。
-            黄金价格波动相比股票和基金较为稳定，是一种风险较小的理财方式。目前，Golders推荐的黄金投资渠道是支付宝-蚂蚁财富中的博时黄金,是更适合普通人的理财之选。</p>
+            黄金价格波动相比股票和基金较为稳定，是一种风险较小的理财方式。目前，Golders推荐的黄金投资渠道是支付宝-蚂蚁财富中的博时黄金,是一种简单易上手的理财方式。</p>
             <p> &emsp;&emsp;2018年7月开始，Golders将开始为期一年的测试期，目前，Golders正常状态下有95%的把握保证盈利。如果对黄金理财和Golders服务有兴趣，可在评论区留言并留下邮箱，
                 则有机会成为体验者。如果成功订阅Golders服务，每个交易日可以收到黄金交易指数和买卖建议的邮件提醒，或者只订阅交易提醒。</p>
-            <p> &emsp;&emsp;Golders的愿景是每年为黄金投资者创造10%-20%的收益，如果未来一年，收益能突破10%，届时Golders将进行一次大规模的升级和服务完善，也将在这条路上走的更远。</p>
+            <p> &emsp;&emsp;Golders的愿景是每年为黄金投资者创造10%-20%的收益，如果未来一年，收益能突破10%，Golders将迎来一次全新的蜕变升级。</p>
         </div>
 
     </div>
@@ -107,7 +107,7 @@
         <div class="col-lg-12 welcome-grids bgImgGirl" >
 
             <h1 style="color: white; margin: 20px 0 40px 0 ;" >黄金实时交易指数</h1>
-            <a href="#" class="button12"style="margin: 10px 0 70px 0 ;"><span id="TradingIndex">交易指数：</span></a>
+            <a href="#" class="button12" style="margin: 10px 0 70px 0 ;"><span id="TradingIndexs">交易指数：</span></a>
 
             <!--<a href="#"  ><span id="TradingIndexs"style=" margin: 20px 0 50px 0 ;">交易指数：5.133</span></a>-->
             <p>&emsp;&emsp;</p>
@@ -117,6 +117,8 @@
             <img src="images/beautifulgirl.jpg"  class="img-responsive" alt=""/>
         </div>-->
     </div>
+    <p style="margin:20px color:gray"><b>&emsp;说明：</b>黄金指数大于5进入可交易状态，大于8可全仓买入或卖出，具体黄金交易指数的操作建议会在订阅邮件中详细说明。</p>
+
 </div>
 <!--<div width="100%"  ><p>&emsp;&emsp;</p><p>&emsp;&emsp;</p></div>-->
 
@@ -163,7 +165,7 @@
             <div class="author-grid-right">
                 <h4><a href="#">李齐飞</a><span style="margin:10px 0 0 0">大数据工程师</span></h4>
                 <p>生日：1993年9月，喜欢看电影、旅游、滑雪，先后在研究院、知名互联网公司从事大数据相关工作，
-                    2018年6月份独立研发Golders黄金交易服务项目，并进入项目测试期。
+                    2018年6月份自研Golders黄金交易服务项目，并进入测试期。
                 </p>
                 <div class="admin-icons">
                     <ul>
@@ -438,7 +440,7 @@ function TradeIndex() {
        /* dataType:"json",*/
         data:{},
         success:function (data) {
-           // console.log(data);
+            console.log(data);
             document.getElementById("TradingIndexs").innerHTML=data;
         },
         error:function () {
