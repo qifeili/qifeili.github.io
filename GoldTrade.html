@@ -166,7 +166,7 @@
             <div class="author-grid-right">
                 <h4><a href="#">李齐飞</a><span style="margin:10px 0 0 0">大数据工程师</span></h4>
                 <p>生日：1993年9月，喜欢看电影、旅游、滑雪，先后在研究院、知名互联网公司从事大数据相关工作，
-                    2018年6月份自研Golders黄金交易服务项目。
+                    2018年6月份自主研发Golders黄金交易服务项目。
                 </p>
                 <div class="admin-icons">
                     <ul>
@@ -280,11 +280,13 @@
         var iframesrc=document.getElementById("iframed");
         var change=document.getElementById('changePercentage');
 
-        if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+        var wid=window.innerWidth
+        alert(wid)
+        if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)||wid<500) {
             alert("手机端")
-            change.innerHTML="<div id=\"changePercentage\" style=\"width:360px;height:550px; overflow:hidden;margin:0 auto;\" >\n" +
+            change.innerHTML="<div id=\"changePercentage\" style=\"width:360px;height:460px; overflow:hidden;margin:0 auto;\" >\n" +
                 "            <iframe id=\"iframed\" src=\"http://m.dyhjw.com/au9999.html/\"\n" +
-                "                    scrolling=\"no\" frameborder=\"0\" style=\"position:relative;top:-150px;left:0px;width:550px;height:1200px;zoom:0.65;\" >\n" +
+                "                    scrolling=\"no\" frameborder=\"0\" style=\"position:relative;top:-150px;left:0px;width:550px;height:1200px;zoom:0.6;\" >\n" +
                 "\n"
                 "            </iframe>\n" +
                 "        </div>";
