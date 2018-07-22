@@ -281,19 +281,17 @@
         var change=document.getElementById('changePercentage');
 
         var wid=window.innerWidth
-        alert(wid)
         if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)||wid<500) {
-            alert("手机端")
-            change.innerHTML="<div id=\"changePercentage\" style=\"width:360px;height:460px; overflow:hidden;margin:0 auto;\" >\n" +
+            change.innerHTML="<div id=\"changePercentage\" style=\"width:310px;height:460px; overflow:hidden;margin:0 auto;\" >\n" +
                 "            <iframe id=\"iframed\" src=\"http://m.dyhjw.com/au9999.html/\"\n" +
-                "                    scrolling=\"no\" frameborder=\"0\" style=\"position:relative;top:-150px;left:0px;width:550px;height:1200px;zoom:0.6;\" >\n" +
+                "                    scrolling=\"no\" frameborder=\"0\" style=\"position:relative;top:-150px;left:0px;width:550px;height:1200px;zoom:0.56;\" >\n" +
                 "\n"
                 "            </iframe>\n" +
                 "        </div>";
 
 
 
-        }else{            alert("电脑端")
+        }else{
             change.innerHTML=" <div id=\"changePercentage\" style=\"width:820px;height:670px; overflow:hidden;margin: 0 auto; /*transform: scale(0.5,0.75);*/ \" >\n" +
                 "            <iframe id=\"iframed\" src=\"http://dyhjw.com/au9999.html/\"\n" +
                 "                    scrolling=\"no\" frameborder=\"0\" style=\"position:relative;top:-300px;left:-250px;width:1100px;height:1200px;\" >\n" +
