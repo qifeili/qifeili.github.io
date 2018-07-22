@@ -280,7 +280,7 @@
         var iframesrc=document.getElementById("iframed");
         var change=document.getElementById('changePercentage');
 
-        if ((bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) ){
+        if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){
             alert("手机端")
             change.innerHTML="<div id=\"changePercentage\" style=\"width:360px;height:550px; overflow:hidden;margin:0 auto;\" >\n" +
                 "            <iframe id=\"iframed\" src=\"http://m.dyhjw.com/au9999.html/\"\n" +
