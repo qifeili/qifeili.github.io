@@ -281,7 +281,7 @@
         var change=document.getElementById('changePercentage');
 
         if ((bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) ){
-
+            alert("手机端")
             change.innerHTML="<div id=\"changePercentage\" style=\"width:360px;height:550px; overflow:hidden;margin:0 auto;\" >\n" +
                 "            <iframe id=\"iframed\" src=\"http://m.dyhjw.com/au9999.html/\"\n" +
                 "                    scrolling=\"no\" frameborder=\"0\" style=\"position:relative;top:-150px;left:0px;width:550px;height:1200px;zoom:0.65;\" >\n" +
@@ -291,7 +291,7 @@
 
 
 
-        }else{
+        }else{            alert("电脑端")
             change.innerHTML=" <div id=\"changePercentage\" style=\"width:820px;height:670px; overflow:hidden;margin: 0 auto; /*transform: scale(0.5,0.75);*/ \" >\n" +
                 "            <iframe id=\"iframed\" src=\"http://dyhjw.com/au9999.html/\"\n" +
                 "                    scrolling=\"no\" frameborder=\"0\" style=\"position:relative;top:-300px;left:-250px;width:1100px;height:1200px;\" >\n" +
