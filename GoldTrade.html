@@ -50,7 +50,9 @@
                 <ul class="nav navbar-nav navbar-center cl-effect-15">
                     <li><a href="index.html" data-hover="Home">Home</a></li>
                     <li><a href="index.html" class="active">Golders</a></li>
-                    <li><a href="http://www.yisen.live" data-hover="墙绘" onclick="ScrollTop()">墙绘</a></li>
+                    <!--
+                                        <li><a href="http://www.yisen.live" data-hover="墙绘" onclick="ScrollTop()">墙绘</a></li>
+                    -->
                     <!--<li><a href="#detail" data-hover="黄金交易" onclick="ScrollTop()">黄金交易</a></li>-->
                 </ul>
                 <div class="clearfix"></div>
@@ -157,7 +159,11 @@
 <!-- //features -->
 <!--留言板-->
 <div width="100%"><p>&emsp;&emsp;</p></div>
+<!--
 <h3 class="agileits-title" style="margin: 0px 0px -10px 0px">留言板</h3>
+-->
+<h3 class="agileits-title" style="margin: 0px 0px -10px 0px">个人简介</h3>
+
 
 <div class="container">
     <!-- <div id="post">
@@ -192,35 +198,36 @@
             <div class="clearfix"></div>
         </div>
     </div>
-    <div class="write-reply">
-        <h4 class="w3ls-title">Write a Comment</h4>
-        <!--<form action="http://118.24.20.235:8888/acgolder" method="get"  id="sunM">-->
-        <input type="text" name="name" id="Cname" placeholder="Name（请输入昵称）" required="">
-        <textarea name="comment" id="Ccomment" placeholder="Write a comment here..（评论内容）" required=""></textarea>
+    <!--   受审核影响暂时关闭
+      <div class="write-reply">
+            <h4 class="w3ls-title">Write a Comment</h4>
+            &lt;!&ndash;<form action="http://118.24.20.235:8888/acgolder" method="get"  id="sunM">&ndash;&gt;
+            <input type="text" name="name" id="Cname" placeholder="Name（请输入昵称）" required="">
+            <textarea name="comment" id="Ccomment" placeholder="Write a comment here..（评论内容）" required=""></textarea>
 
-        <input type="checkbox" name="authority" value="pri" class="cradio fl"
-               style="margin: 10px;width: 20px;height: 20px"><span class="cradioSpan fl"
-                                                                   style="width: 100px;height: 40px;display:block;line-height: 40px;">仅主人可见</span>
-        <!-- <input type="radio" name="authority" value="pri" class="cradio" ><span class="cradioSpan">仅主人可见</span>-->
-        <input type="submit" value="Submit" onclick="saveCommit()"> <!--onclick="saveCommit()"-->
-
-
-        <!--</form>-->
-
-    </div>
-    <div class="container">
-        <h4 class="w3ls-title " style="margin-top: 2%; float: left;">评论详情:</h4>
-
-        <button id="showAll" class="btn btn-primary fr" style="margin:2% 1%;"
-                onclick="showComment('http://118.24.20.235:8888/gacgolder')">显示全部
-        </button>
-        <button id="show" class="btn btn-primary fr" style="margin:2% 1%;">隐藏评论</button>
+            <input type="checkbox" name="authority" value="pri" class="cradio fl"
+                   style="margin: 10px;width: 20px;height: 20px"><span class="cradioSpan fl"
+                                                                       style="width: 100px;height: 40px;display:block;line-height: 40px;">仅主人可见</span>
+            &lt;!&ndash; <input type="radio" name="authority" value="pri" class="cradio" ><span class="cradioSpan">仅主人可见</span>&ndash;&gt;
+            <input type="submit" value="Submit" onclick="saveCommit()"> &lt;!&ndash;onclick="saveCommit()"&ndash;&gt;
 
 
-    </div>
-    <div class="container ">
-        <ul id="comment" style="width: 100%;"></ul>
-    </div>
+            &lt;!&ndash;</form>&ndash;&gt;
+
+        </div>
+        <div class="container">
+            <h4 class="w3ls-title " style="margin-top: 2%; float: left;">评论详情:</h4>
+
+            <button id="showAll" class="btn btn-primary fr" style="margin:2% 1%;"
+                    onclick="showComment('http://118.24.20.235:8888/gacgolder')">显示全部
+            </button>
+            <button id="show" class="btn btn-primary fr" style="margin:2% 1%;">隐藏评论</button>
+
+
+        </div>
+        <div class="container ">
+            <ul id="comment" style="width: 100%;"></ul>
+        </div>-->
 </div>
 
 <div width="100%"><p>&emsp;&emsp;</p></div>
@@ -254,9 +261,9 @@
 <!-- footer -->
 <div class="footer">
     <div class="container">
-
+        网站备案号：京ICP备19004580号-1
         <div class="footer-right">
-            <h2><a href="index.html">Jonathon&emsp;&emsp;</a></h2>
+            <p><a href="index.html">网站备案号：京ICP备19004580号-1&emsp;&emsp;</a></p>
         </div>
         <div class="clearfix"></div>
     </div>
