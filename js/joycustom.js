@@ -44,7 +44,7 @@
         }else{
             change.innerHTML=" <div id=\"changePercentage\" style=\"width:820px;height:750px; overflow:hidden;margin: 0 auto; /*transform: scale(0.5,0.75);*/ \" >\n" +
                 "            <iframe id=\"iframed\" src=\"http://www.dyhjw.com/au9999.html/\"\n" +
-                "                    scrolling=\"no\" frameborder=\"0\" style=\"position:relative;top:-338px;left:-260px;width:1100px;height:1200px;\" >\n" +
+                "                    scrolling=\"no\" frameborder=\"0\" style=\"position:relative;top:-938px;left:-260px;width:1100px;height:1200px;\" >\n" +
                 "\n" +
                 "            </iframe>\n" +
                 "        </div>";
@@ -187,7 +187,11 @@ function TradeIndex() {
         data:{},
         success:function (data) {
             console.log(data);
-            document.getElementById("TradingIndexs").innerHTML=data;
+            if(data == "" || data == null || data == undefined ){
+                console.log("黄金指数后台响应为空！")
+            }else {
+                document.getElementById("TradingIndexs").innerHTML = data;
+            }
         },
         error:function () {
          console.log("ajax请求出错！")
